@@ -1,0 +1,8 @@
+D:\DotNetProjects\InvMIS\InvMIS.Domain\obj\Debug\net9.0\InvMIS.Domain.csproj.AssemblyReference.cache
+D:\DotNetProjects\InvMIS\InvMIS.Domain\obj\Debug\net9.0\rpswa.dswa.cache.json
+D:\DotNetProjects\InvMIS\InvMIS.Domain\obj\Debug\net9.0\InvMIS.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\DotNetProjects\InvMIS\InvMIS.Domain\obj\Debug\net9.0\InvMIS.Domain.AssemblyInfoInputs.cache
+D:\DotNetProjects\InvMIS\InvMIS.Domain\obj\Debug\net9.0\InvMIS.Domain.AssemblyInfo.cs
+D:\DotNetProjects\InvMIS\InvMIS.Domain\obj\Debug\net9.0\InvMIS.Domain.csproj.CoreCompileInputs.cache
+D:\DotNetProjects\InvMIS\InvMIS.Domain\obj\Debug\net9.0\InvMIS.Domain.MvcApplicationPartsAssemblyInfo.cs
+D:\DotNetProjects\InvMIS\InvMIS.Domain\obj\Debug\net9.0\InvMIS.Domain.MvcApplicationPartsAssemblyInfo.cache

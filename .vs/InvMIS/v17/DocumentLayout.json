@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DotNetProjects\\InvMIS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9C7CD3B2-E35A-4A68-AD01-21B0BA089F4C}|InvMIS.API\\InvMIS.API.csproj|d:\\dotnetprojects\\invmis\\invmis.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C7CD3B2-E35A-4A68-AD01-21B0BA089F4C}|InvMIS.API\\InvMIS.API.csproj|solutionrelative:invmis.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DD9BD5-9D33-4D12-B8A0-715292D1E0F0}|InvMIS.Application\\InvMIS.Application.csproj|d:\\dotnetprojects\\invmis\\invmis.application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14DD9BD5-9D33-4D12-B8A0-715292D1E0F0}|InvMIS.Application\\InvMIS.Application.csproj|solutionrelative:invmis.application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DD9BD5-9D33-4D12-B8A0-715292D1E0F0}|InvMIS.Application\\InvMIS.Application.csproj|d:\\dotnetprojects\\invmis\\invmis.application\\interfaces\\iproductservic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14DD9BD5-9D33-4D12-B8A0-715292D1E0F0}|InvMIS.Application\\InvMIS.Application.csproj|solutionrelative:invmis.application\\interfaces\\iproductservic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C7CD3B2-E35A-4A68-AD01-21B0BA089F4C}|InvMIS.API\\InvMIS.API.csproj|d:\\dotnetprojects\\invmis\\invmis.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9C7CD3B2-E35A-4A68-AD01-21B0BA089F4C}|InvMIS.API\\InvMIS.API.csproj|solutionrelative:invmis.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35788209-C30E-42E2-BAC2-3092CF0E3AE0}|InvMIS.Infrastructure\\InvMIS.Infrastructure.csproj|d:\\dotnetprojects\\invmis\\invmis.infrastructure\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35788209-C30E-42E2-BAC2-3092CF0E3AE0}|InvMIS.Infrastructure\\InvMIS.Infrastructure.csproj|solutionrelative:invmis.infrastructure\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DD9BD5-9D33-4D12-B8A0-715292D1E0F0}|InvMIS.Application\\InvMIS.Application.csproj|d:\\dotnetprojects\\invmis\\invmis.application\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14DD9BD5-9D33-4D12-B8A0-715292D1E0F0}|InvMIS.Application\\InvMIS.Application.csproj|solutionrelative:invmis.application\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A22E284-7EC0-4024-AF5E-A4EBE544B38D}|InvMIS.Domain\\InvMIS.Domain.csproj|d:\\dotnetprojects\\invmis\\invmis.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A22E284-7EC0-4024-AF5E-A4EBE544B38D}|InvMIS.Domain\\InvMIS.Domain.csproj|solutionrelative:invmis.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35788209-C30E-42E2-BAC2-3092CF0E3AE0}|InvMIS.Infrastructure\\InvMIS.Infrastructure.csproj|d:\\dotnetprojects\\invmis\\invmis.infrastructure\\data\\invmisdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35788209-C30E-42E2-BAC2-3092CF0E3AE0}|InvMIS.Infrastructure\\InvMIS.Infrastructure.csproj|solutionrelative:invmis.infrastructure\\data\\invmisdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35788209-C30E-42E2-BAC2-3092CF0E3AE0}|InvMIS.Infrastructure\\InvMIS.Infrastructure.csproj|d:\\dotnetprojects\\invmis\\invmis.infrastructure\\invmis.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{35788209-C30E-42E2-BAC2-3092CF0E3AE0}|InvMIS.Infrastructure\\InvMIS.Infrastructure.csproj|solutionrelative:invmis.infrastructure\\invmis.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C7CD3B2-E35A-4A68-AD01-21B0BA089F4C}|InvMIS.API\\InvMIS.API.csproj|d:\\dotnetprojects\\invmis\\invmis.api\\invmis.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9C7CD3B2-E35A-4A68-AD01-21B0BA089F4C}|InvMIS.API\\InvMIS.API.csproj|solutionrelative:invmis.api\\invmis.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14DD9BD5-9D33-4D12-B8A0-715292D1E0F0}|InvMIS.Application\\InvMIS.Application.csproj|d:\\dotnetprojects\\invmis\\invmis.application\\invmis.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{14DD9BD5-9D33-4D12-B8A0-715292D1E0F0}|InvMIS.Application\\InvMIS.Application.csproj|solutionrelative:invmis.application\\invmis.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A22E284-7EC0-4024-AF5E-A4EBE544B38D}|InvMIS.Domain\\InvMIS.Domain.csproj|d:\\dotnetprojects\\invmis\\invmis.domain\\invmis.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7A22E284-7EC0-4024-AF5E-A4EBE544B38D}|InvMIS.Domain\\InvMIS.Domain.csproj|solutionrelative:invmis.domain\\invmis.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Application\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "InvMIS.Application\\Services\\ProductService.cs",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Application\\Services\\ProductService.cs",
+              "RelativeToolTip": "InvMIS.Application\\Services\\ProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T16:06:42.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IProductServic.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Application\\Interfaces\\IProductServic.cs",
+              "RelativeDocumentMoniker": "InvMIS.Application\\Interfaces\\IProductServic.cs",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Application\\Interfaces\\IProductServic.cs",
+              "RelativeToolTip": "InvMIS.Application\\Interfaces\\IProductServic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T16:05:54.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.API\\appsettings.json",
+              "RelativeDocumentMoniker": "InvMIS.API\\appsettings.json",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.API\\appsettings.json",
+              "RelativeToolTip": "InvMIS.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-31T16:00:51.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.API\\Program.cs",
+              "RelativeDocumentMoniker": "InvMIS.API\\Program.cs",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.API\\Program.cs",
+              "RelativeToolTip": "InvMIS.API\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T15:59:19.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Infrastructure\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "InvMIS.Infrastructure\\Repositories\\Repository.cs",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Infrastructure\\Repositories\\Repository.cs",
+              "RelativeToolTip": "InvMIS.Infrastructure\\Repositories\\Repository.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T15:58:26.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Application\\Interfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "InvMIS.Application\\Interfaces\\IRepository.cs",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Application\\Interfaces\\IRepository.cs",
+              "RelativeToolTip": "InvMIS.Application\\Interfaces\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T15:56:54.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Domain\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "InvMIS.Domain\\Entities\\Product.cs",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Domain\\Entities\\Product.cs",
+              "RelativeToolTip": "InvMIS.Domain\\Entities\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T15:55:25.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "InvMISDbContext.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Infrastructure\\Data\\InvMISDbContext.cs",
+              "RelativeDocumentMoniker": "InvMIS.Infrastructure\\Data\\InvMISDbContext.cs",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Infrastructure\\Data\\InvMISDbContext.cs",
+              "RelativeToolTip": "InvMIS.Infrastructure\\Data\\InvMISDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-31T15:51:51.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InvMIS.Infrastructure",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Infrastructure\\InvMIS.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "InvMIS.Infrastructure\\InvMIS.Infrastructure.csproj",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Infrastructure\\InvMIS.Infrastructure.csproj",
+              "RelativeToolTip": "InvMIS.Infrastructure\\InvMIS.Infrastructure.csproj",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAiwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-31T14:12:49.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "InvMIS.API",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.API\\InvMIS.API.csproj",
+              "RelativeDocumentMoniker": "InvMIS.API\\InvMIS.API.csproj",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.API\\InvMIS.API.csproj",
+              "RelativeToolTip": "InvMIS.API\\InvMIS.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-31T14:17:13.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "InvMIS.Application",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Application\\InvMIS.Application.csproj",
+              "RelativeDocumentMoniker": "InvMIS.Application\\InvMIS.Application.csproj",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Application\\InvMIS.Application.csproj",
+              "RelativeToolTip": "InvMIS.Application\\InvMIS.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-31T14:08:36.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "InvMIS.Domain",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Domain\\InvMIS.Domain.csproj",
+              "RelativeDocumentMoniker": "InvMIS.Domain\\InvMIS.Domain.csproj",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Domain\\InvMIS.Domain.csproj",
+              "RelativeToolTip": "InvMIS.Domain\\InvMIS.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-31T14:11:57.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
