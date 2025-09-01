@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "761QFRTtCOI=",
+  "dgSpecHash": "YlfEI5HaQ6Y=",
   "success": true,
   "projectFilePath": "D:\\DotNetProjects\\InvMIS\\InvMIS.Application\\InvMIS.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\amabi\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
     "C:\\Users\\amabi\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.8\\microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
     "C:\\Users\\amabi\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.8\\microsoft.entityframeworkcore.9.0.8.nupkg.sha512",
     "C:\\Users\\amabi\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.8\\microsoft.entityframeworkcore.abstractions.9.0.8.nupkg.sha512",

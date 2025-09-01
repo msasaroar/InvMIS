@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InvMIS.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e127b9f7c3eb3bb71c13b44f940936927de7ce49")]
 [assembly: System.Reflection.AssemblyProductAttribute("InvMIS.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InvMIS.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

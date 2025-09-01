@@ -4,5 +4,5 @@ D:\DotNetProjects\InvMIS\InvMIS.Infrastructure\obj\Debug\net9.0\InvMIS.Infrastru
 D:\DotNetProjects\InvMIS\InvMIS.Infrastructure\obj\Debug\net9.0\InvMIS.Infrastructure.AssemblyInfoInputs.cache
 D:\DotNetProjects\InvMIS\InvMIS.Infrastructure\obj\Debug\net9.0\InvMIS.Infrastructure.AssemblyInfo.cs
 D:\DotNetProjects\InvMIS\InvMIS.Infrastructure\obj\Debug\net9.0\InvMIS.Infrastructure.csproj.CoreCompileInputs.cache
-D:\DotNetProjects\InvMIS\InvMIS.Infrastructure\obj\Debug\net9.0\InvMIS.Infrastructure.MvcApplicationPartsAssemblyInfo.cs
 D:\DotNetProjects\InvMIS\InvMIS.Infrastructure\obj\Debug\net9.0\InvMIS.Infrastructure.MvcApplicationPartsAssemblyInfo.cache
+D:\DotNetProjects\InvMIS\InvMIS.Infrastructure\obj\Debug\net9.0\InvMIS.Infrastructure.sourcelink.json

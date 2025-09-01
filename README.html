@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <pre>
+১️⃣ ফাইল ও ফোল্ডার Structure – InvMIS Project
+===========================================
+Domain Layer (Entities) – InvMIS.Domain/Entities/
+File Name	Content / Entity
+Product.cs	Product entity
+Category.cs	Category entity
+Supplier.cs	Supplier entity
+Stock.cs	Stock entity
+User.cs	User entity
+Infrastructure Layer – InvMIS.Infrastructure/
+Data
+File Name	Content
+InvMISDbContext.cs	DbContext with DbSet for all entities
+Repositories
+File Name	Content
+Repository.cs	Generic repository implementation
+Application Layer – InvMIS.Application/
+Interfaces – InvMIS.Application/Interfaces/
+File Name	Content / Service Interface
+IProductService.cs	Product CRUD Interface
+ICategoryService.cs	Category CRUD Interface
+ISupplierService.cs	Supplier CRUD Interface
+IStockService.cs	Stock CRUD Interface
+IUserService.cs	User / Auth Service Interface
+Services – InvMIS.Application/Services/
+File Name	Content / Service Implementation
+ProductService.cs	Implements IProductService
+CategoryService.cs	Implements ICategoryService
+SupplierService.cs	Implements ISupplierService
+StockService.cs	Implements IStockService
+UserService.cs	Implements IUserService
+API Layer – InvMIS.API/Controllers/
+File Name	Content / Controller
+ProductController.cs	Product CRUD API
+CategoryController.cs	Category CRUD API
+SupplierController.cs	Supplier CRUD API
+StockController.cs	Stock CRUD API
+AuthController.cs	JWT Authentication / Login
+API Layer – InvMIS.API/Program.cs
+
+সব DI (Repositories + Services)
+
+JWT Authentication
+
+Swagger setup
+
+DbSeeder for Admin user
+
+
+২️⃣ চূড়ান্ত টেস্টিং Guide – InvMIS API
+===========================================
+Step 1: Database Migrations
+cd InvMIS.Infrastructure
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+
+নিশ্চিত করো appsettings.json এ PostgreSQL connection string ঠিক আছে।
+
+Database নাম হবে InventoryDB
+
+Step 2: Run API
+cd InvMIS.API
+dotnet run
+
+
+বা Visual Studio তে F5 চাপো।
+
+Step 3: Swagger UI / API Testing
+
+Browser এ যাও: https://localhost:5001/swagger
+
+Controllers সব দেখাবে: Product, Category, Supplier, Stock, Auth
+
+Authorize button দিয়ে JWT token সেট করো
+
+Token পাওয়ার জন্য /api/Auth/login POST request:
+
+{
+  "username": "admin",
+  "password": "Admin123!"
+}
+
+
+Token দিয়ে সব Authorized endpoints (POST/PUT/DELETE) access করতে পারবে
+
+Step 4: CRUD Testing Example
+
+Product API:
+
+GET: /api/Product → সব products দেখাবে
+
+POST: /api/Product → নতুন product add (Admin only)
+
+PUT: /api/Product/{id} → product update (Admin only)
+
+DELETE: /api/Product/{id} → product delete (Admin only)
+
+Category, Supplier, Stock একইভাবে পরীক্ষা করা যাবে
+
+Step 5: Admin User Seed Verification
+
+DbSeeder automatically Admin user তৈরি করে
+
+Default Admin username/password:
+
+username: admin
+password: Admin123!
+
+
+Saiful, এই setup অনুযায়ী:
+
+✅ সব Services & Interfaces consistent
+✅ CRUD API complete
+✅ JWT + Role-based Authorization
+✅ Swagger UI থেকে test-ready
+
+যদি চাও, আমি এখন একটি diagram বানিয়ে দেখাই কিভাবে Entities → Repositories → Services → Controllers → API flow কাজ করে, যাতে visual বোঝা সহজ হয়।
+চাও কি আমি করি?
+
+
+===========================================================================================================================
+এখানে InvMIS প্রকল্পের Visual Flow Diagram দিচ্ছি, যা দেখায় কিভাবে Entities → Repositories → Services → Controllers → API কাজ করে।
+===========================================================================================================================
+
+🖼️ InvMIS Architecture Flow Diagram
+              ┌───────────────┐
+              │   Controllers │
+              │ (API Layer)   │
+              └───────┬───────┘
+                      │ Calls
+                      ▼
+              ┌───────────────┐
+              │    Services   │
+              │ (Application) │
+              └───────┬───────┘
+                      │ Uses
+                      ▼
+              ┌───────────────┐
+              │  Repository   │
+              │ (Infrastructure│
+              │   Generic CRUD)│
+              └───────┬───────┘
+                      │ Access
+                      ▼
+              ┌───────────────┐
+              │   DbContext   │
+              │ (EF Core,     │
+              │   PostgreSQL) │
+              └───────┬───────┘
+                      │ Maps
+                      ▼
+        ┌─────────────┴─────────────┐
+        │        Entities           │
+        │ Product, Category,        │
+        │ Supplier, Stock, User     │
+        └───────────────────────────┘
+
+🔑 Key Points of the Diagram
+
+Controllers (API Layer)
+
+External requests আসছে এখানে
+
+GET, POST, PUT, DELETE endpoints handle করে
+
+Services (Application Layer)
+
+Business logic handle করে
+
+Validation, transformation, authentication logic রাখে
+
+Repository (Infrastructure Layer)
+
+Generic CRUD methods implement করে
+
+EF Core DbContext এর সাথে directly interact করে
+
+DbContext (Infrastructure Layer)
+
+Database এর সাথে connection রাখে
+
+DbSet<Entity> দ্বারা table mapping করে
+
+Entities (Domain Layer)
+
+Real-world objects represent করে
+
+Product, Category, Supplier, Stock, User
+
+Saiful, এই diagram অনুযায়ী এখন তোমার Project end-to-end ready।
+
+চাও আমি এখন F5/dotnet run করার পর API test করার জন্য full Swagger walkthrough বানাই step-by-step?
+</pre>
+</body>
+</html>

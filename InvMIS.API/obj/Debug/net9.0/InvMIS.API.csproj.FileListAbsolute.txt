@@ -5,3 +5,4 @@ D:\DotNetProjects\InvMIS\InvMIS.API\obj\Debug\net9.0\InvMIS.API.AssemblyInfoInpu
 D:\DotNetProjects\InvMIS\InvMIS.API\obj\Debug\net9.0\InvMIS.API.AssemblyInfo.cs
 D:\DotNetProjects\InvMIS\InvMIS.API\obj\Debug\net9.0\InvMIS.API.csproj.CoreCompileInputs.cache
 D:\DotNetProjects\InvMIS\InvMIS.API\obj\Debug\net9.0\InvMIS.API.MvcApplicationPartsAssemblyInfo.cache
+D:\DotNetProjects\InvMIS\InvMIS.API\obj\Debug\net9.0\InvMIS.API.sourcelink.json

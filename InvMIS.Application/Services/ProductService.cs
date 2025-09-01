@@ -1,4 +1,5 @@
-﻿using InvMIS.Application.Interfaces;
+﻿/*
+using InvMIS.Application.Interfaces;
 using InvMIS.Domain.Entities;
 using InvMIS.Infrastructure.Repositories;
 using System.Collections.Generic;
@@ -51,3 +52,26 @@ namespace InvMIS.Application.Services
         }
     }
 }
+*/
+
+using InvMIS.Application.Interfaces;
+using InvMIS.Domain.Entities;
+using InvMIS.Infrastructure.Data;
+using InvMIS.Infrastructure.Repositories;
+
+namespace InvMIS.Application.Services
+{
+    public class ProductService : IProductService
+    {
+        private readonly Repository<Product> _repo;
+
+        public ProductService(Repository<Product> repo) => _repo = repo;
+
+        public void AddProduct(Product product) => _repo.Add(product);
+        public void DeleteProduct(int id) => _repo.Delete(id);
+        public IEnumerable<Product> GetAllProducts() => _repo.GetAll();
+        public Product? GetProductById(int id) => _repo.GetById(id);
+        public void UpdateProduct(Product product) => _repo.Update(product);
+    }
+}
+

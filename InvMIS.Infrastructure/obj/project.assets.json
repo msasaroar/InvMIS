@@ -943,6 +943,22 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
+      },
+      "InvMIS.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.OpenApi": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/InvMIS.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InvMIS.Domain.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -2836,10 +2852,16 @@
         "system.threading.channels.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "InvMIS.Domain/1.0.0": {
+      "type": "project",
+      "path": "../InvMIS.Domain/InvMIS.Domain.csproj",
+      "msbuildProject": "../InvMIS.Domain/InvMIS.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "InvMIS.Domain >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.8",
       "Microsoft.EntityFrameworkCore >= 9.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.8",
@@ -2877,7 +2899,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\DotNetProjects\\InvMIS\\InvMIS.Domain\\InvMIS.Domain.csproj": {
+              "projectPath": "D:\\DotNetProjects\\InvMIS\\InvMIS.Domain\\InvMIS.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

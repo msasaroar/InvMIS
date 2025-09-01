@@ -6,3 +6,4 @@ D:\DotNetProjects\InvMIS\InvMIS.Domain\obj\Debug\net9.0\InvMIS.Domain.AssemblyIn
 D:\DotNetProjects\InvMIS\InvMIS.Domain\obj\Debug\net9.0\InvMIS.Domain.csproj.CoreCompileInputs.cache
 D:\DotNetProjects\InvMIS\InvMIS.Domain\obj\Debug\net9.0\InvMIS.Domain.MvcApplicationPartsAssemblyInfo.cs
 D:\DotNetProjects\InvMIS\InvMIS.Domain\obj\Debug\net9.0\InvMIS.Domain.MvcApplicationPartsAssemblyInfo.cache
+D:\DotNetProjects\InvMIS\InvMIS.Domain\obj\Debug\net9.0\InvMIS.Domain.sourcelink.json
