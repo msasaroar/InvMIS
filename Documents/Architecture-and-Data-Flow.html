@@ -1,0 +1,224 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>📘Documentation : InvMIS</title>
+  <!-- Google Tag Manager (head) - container: GTM-MB72WSHR -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MB72WSHR');
+  </script>
+
+  <style>
+    /* User's requested styling rules */
+    header {
+      background-color: green;
+      color: black;
+      font-weight: bold;
+      font-size: 35px;
+      text-align: center;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    body {
+      background-color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .home-button {
+      position: absolute;
+      border-radius: 8px;
+      font-size: 16px;
+      left: 15px;
+      top: 10px;
+      background-color: orange;
+      color: blue;
+      padding: 15px 30px;
+      text-decoration: none;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      border: 5px solid darkgreen;
+      border-radius: 6px;
+      z-index: 1001;
+    }
+    .home-button:hover {
+      background-color: blue;
+      color: orange;
+    }
+
+    main {
+      padding: 75px 20px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Buttons: center-align (except Home which is absolute inside header) */
+    .center-btn {
+      display: inline-block;
+      background-color: orange;
+      color: blue;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      margin: 16px 0;
+    }
+    .center-btn:hover {
+      background-color: blue;
+      color: orange;
+    }
+
+    /* Styling for the pre block to make it readable */
+    pre.repo-pre {
+      background: #f7f7f7;
+      border: 1px solid #ddd;
+      padding: 18px;
+      overflow: auto;
+      white-space: pre-wrap; /* allow wrapping for narrow screens */
+      font-size: 14px;
+      line-height: 1.5;
+      border-radius: 6px;
+    }
+
+    /* make content responsive */
+    @media (max-width: 600px) {
+      header { font-size: 22px; padding: 14px 0; }
+      .home-button { padding: 10px 16px; left: 8px; top: 8px; font-size: 14px; }
+      .center-btn { font-size: 14px; padding: 10px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- GTM (noscript) - required in body -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MB72WSHR"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <header>
+    <a class="home-button" href="../index.html" title="Home">Home</a>
+    Architecture & Data Flow
+  </header>
+
+  <main>
+
+
+        <pre class="repo-pre">
+<b>1. Application Layers</b>
+
+    The InvMIS application follows Clean Architecture principles. Each layer is fully separated for maintainability and scalability.
+
+    [ a ] Domain Layer [ Core Business Entities ]
+        => Contains Entities [ Product, Category, Supplier, Stock, User ]
+        => Defines the shape of business objects without persistence logic
+        => Example: `Product.cs` only contains Id, Name, Price, Quantity
+
+
+    [ b ] Application Layer [ Business Logic ]
+        => Contains Interfaces & Services
+        => Implements business rules [ validation, authorization, calculations ]
+        => Uses Repositories [ from Infrastructure ] to access data
+        => Example: `ProductService` validates product data before saving
+
+
+    [ c ] Infrastructure Layer [ Data Access ]
+        => Contains `DbContext` [ EF Core ]
+        => Implements Generic Repository [ CRUD operations ]
+        => Responsible for interacting with the PostgreSQL database
+        => Example: `Repository<Product>
+            ` handles `Add`, `Update`, `Delete`
+
+        
+    [ d ] API Layer [ Presentation Layer ]
+        => Contains Controllers [ ProductController, CategoryController, etc. ]
+        => Exposes RESTful API endpoints
+        => Maps incoming HTTP requests → Calls Application Services → Returns responses
+        => Example: `/api/products` → `ProductController` → `ProductService`
+</pre>
+
+<pre class="repo-pre">
+<b>2. Component Relationships</b>
+
+    [ Client / Frontend / Postman / Swagger ]
+                            │
+                            ▼
+    ┌────────────────────────────────────┐
+    │   API Controllers  │ [ Presentation Layer ] │
+    └───────────────┬────────────────────┘
+                            │ Calls Services
+                            ▼
+    ┌───────────────────────────────────┐
+    │   Application Layer │ [ Business Logic ]   │
+    └─────────────────┬─────────────────┘
+                                │ Uses Repository
+                                ▼
+    ┌────────────────────────────────┐
+    │ Infrastructure Layer│ [ Data Access ]  │
+    │           - EF Core                          │
+    │           - Repository<T>                 │
+    └─────────────────┬──────────────┘
+                                │ Maps Entities
+                                ▼
+        ┌──────────────────────────────┐
+        │   Domain Layer │      [ Entities ]    │
+        └──────────────────────────────┘
+                               │
+                               ▼
+                 [PostgreSQL Database]
+
+</pre>           
+
+<pre class="repo-pre">
+<b>3. Data Flow</b>
+
+    Example: Add a Product
+
+    1. Client sends `POST /api/products` with JSON body:
+            json
+            {
+                "name": "Laptop",
+                "price": 1200,
+                "quantity": 10
+            }
+    2. ProductController receives the request and calls `IProductService.Add(Product)`.
+    3. ProductService validates the data ]e.g., Price > 0, Quantity >= 0].
+    4. ProductService calls `Repository<Product>.Add(product)`.
+    5. Repository uses `InvMISDbContext` to insert data into `Products` table in PostgreSQL.
+    6. DbContext saves the changes → Database stores new Product row.
+    7. Response flows back → Product details with `Id` returned to client.
+</pre>           
+
+<pre class="repo-pre">
+<b>4. Security & Authentication Flow</b>
+
+    1. UserController issues JWT Token on successful login.
+    2. Client includes `Authorization: Bearer <token>
+        ` in API calls.
+    3. Middleware checks validity of token ]Issuer, Audience, Expiry].
+    4. If valid → request proceeds, else 401 Unauthorized.
+</pre>           
+
+<pre class="repo-pre">
+<b>5. Benefits of This Architecture</b>
+    => Separation of Concerns ]UI, Business Logic, Data]
+    => Easy to maintain & scale
+    => Flexible: can change Database without affecting Business Logic
+    => Secure: supports JWT Authentication and Role-based Authorization
+    => Testable: Services and Repositories can be unit tested independently
+</pre>
+
+  </main>
+</body>
+</html>

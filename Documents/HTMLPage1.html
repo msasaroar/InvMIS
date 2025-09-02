@@ -1,0 +1,163 @@
+﻿<pre>
+ঠিক আছে Saiful 🙂
+আমি তোমার জন্য পুরোটা structure এবং চূড়ান্ত টেস্টিং guide বানিয়ে দিচ্ছি।
+
+---
+
+# ১️⃣ ফাইল ও ফোল্ডার Structure – InvMIS Project
+
+## **Domain Layer (Entities)** – `InvMIS.Domain/Entities/`
+
+| File Name   | Content / Entity |
+| ----------- | ---------------- |
+| Product.cs  | Product entity   |
+| Category.cs | Category entity  |
+| Supplier.cs | Supplier entity  |
+| Stock.cs    | Stock entity     |
+| User.cs     | User entity      |
+
+---
+
+## **Infrastructure Layer** – `InvMIS.Infrastructure/`
+
+### Data
+
+| File Name          | Content                               |
+| ------------------ | ------------------------------------- |
+| InvMISDbContext.cs | DbContext with DbSet for all entities |
+
+### Repositories
+
+| File Name     | Content                           |
+| ------------- | --------------------------------- |
+| Repository.cs | Generic repository implementation |
+
+---
+
+## **Application Layer** – `InvMIS.Application/`
+
+### Interfaces – `InvMIS.Application/Interfaces/`
+
+| File Name           | Content / Service Interface   |
+| ------------------- | ----------------------------- |
+| IProductService.cs  | Product CRUD Interface        |
+| ICategoryService.cs | Category CRUD Interface       |
+| ISupplierService.cs | Supplier CRUD Interface       |
+| IStockService.cs    | Stock CRUD Interface          |
+| IUserService.cs     | User / Auth Service Interface |
+
+### Services – `InvMIS.Application/Services/`
+
+| File Name          | Content / Service Implementation |
+| ------------------ | -------------------------------- |
+| ProductService.cs  | Implements IProductService       |
+| CategoryService.cs | Implements ICategoryService      |
+| SupplierService.cs | Implements ISupplierService      |
+| StockService.cs    | Implements IStockService         |
+| UserService.cs     | Implements IUserService          |
+
+---
+
+## **API Layer** – `InvMIS.API/Controllers/`
+
+| File Name             | Content / Controller       |
+| --------------------- | -------------------------- |
+| ProductController.cs  | Product CRUD API           |
+| CategoryController.cs | Category CRUD API          |
+| SupplierController.cs | Supplier CRUD API          |
+| StockController.cs    | Stock CRUD API             |
+| AuthController.cs     | JWT Authentication / Login |
+
+---
+
+## **API Layer** – `InvMIS.API/Program.cs`
+
+* সব DI (Repositories + Services)
+* JWT Authentication
+* Swagger setup
+* DbSeeder for Admin user
+
+---
+
+# ২️⃣ চূড়ান্ত টেস্টিং Guide – InvMIS API
+
+### Step 1: Database Migrations
+
+```bash
+cd InvMIS.Infrastructure
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+```
+
+* নিশ্চিত করো `appsettings.json` এ PostgreSQL connection string ঠিক আছে।
+* Database নাম হবে **InventoryDB**
+
+---
+
+### Step 2: Run API
+
+```bash
+cd InvMIS.API
+dotnet run
+```
+
+* বা Visual Studio তে **F5** চাপো।
+
+---
+
+### Step 3: Swagger UI / API Testing
+
+1. Browser এ যাও: `https://localhost:5001/swagger`
+2. Controllers সব দেখাবে: Product, Category, Supplier, Stock, Auth
+3. **Authorize** button দিয়ে JWT token সেট করো
+
+   * Token পাওয়ার জন্য `/api/Auth/login` POST request:
+
+     ```json
+     {
+       "username": "admin",
+       "password": "Admin123!"
+     }
+     ```
+4. Token দিয়ে সব **Authorized endpoints** (POST/PUT/DELETE) access করতে পারবে
+
+---
+
+### Step 4: CRUD Testing Example
+
+**Product API**:
+
+* GET: `/api/Product` → সব products দেখাবে
+* POST: `/api/Product` → নতুন product add (Admin only)
+* PUT: `/api/Product/{id}` → product update (Admin only)
+* DELETE: `/api/Product/{id}` → product delete (Admin only)
+
+**Category, Supplier, Stock** একইভাবে পরীক্ষা করা যাবে
+
+---
+
+### Step 5: Admin User Seed Verification
+
+* DbSeeder automatically Admin user তৈরি করে
+* Default Admin username/password:
+
+  ```text
+  username: admin
+  password: Admin123!
+  ```
+
+---
+
+Saiful, এই setup অনুযায়ী:
+
+✅ সব Services & Interfaces consistent
+✅ CRUD API complete
+✅ JWT + Role-based Authorization
+✅ Swagger UI থেকে test-ready
+
+---
+
+যদি চাও, আমি এখন **একটি diagram বানিয়ে দেখাই** কিভাবে **Entities → Repositories → Services → Controllers → API** flow কাজ করে, যাতে visual বোঝা সহজ হয়।
+চাও কি আমি করি?
+
+</pre>

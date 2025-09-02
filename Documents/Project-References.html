@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>InvMIS – Project References</title>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MB72WSHR');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <style>
+      /* From your guideline */
+      header {
+        background-color: green;
+        color: black;
+        font-weight: bold;
+        font-size: 35px;
+        text-align: center;
+        padding: 20px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+      body {
+        background-color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .home-button {
+        position: absolute;
+        left: 15px;
+        top: 10px;
+        background-color: orange;
+        color: blue;
+        padding: 15px 30px;
+        text-decoration: none;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        border: 5px solid darkgreen;
+        border-radius: 6px;
+        z-index: 1001;
+        font-size: 16px;
+      }
+      .home-button:hover {
+        background-color: blue;
+        color: orange;
+      }
+      main {
+        padding: 75px 0 0;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      /* Page-specific helpers */
+      .wrap {
+        padding: 24px 16px 60px;
+      }
+      h2 {
+        margin: 10px 0 8px;
+        font-size: 22px;
+      }
+      p, li {
+        font-size: 15px;
+        line-height: 1.55;
+        color: #222;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      @media (min-width: 900px) {
+        .grid {
+          grid-template-columns: 1.2fr 1fr;
+        }
+      }
+      .panel {
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 16px 18px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+        background: #fff;
+      }
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 8px;
+      }
+      .table th, .table td {
+        border: 1px solid #e5e7eb;
+        padding: 10px 12px;
+        text-align: left;
+        vertical-align: top;
+      }
+      .table th {
+        background: #f8fafc;
+        font-weight: 700;
+      }
+      .note {
+        background: #fff7ed;
+        border: 1px solid #fed7aa;
+        padding: 12px 14px;
+        border-radius: 10px;
+        margin-top: 12px;
+        color: #7c2d12;
+      }
+      .code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        background: #0b1020;
+        color: #e2e8f0;
+        padding: 10px 12px;
+        border-radius: 8px;
+        overflow: auto;
+        font-size: 13px;
+      }
+      .caption {
+        font-size: 12px;
+        color: #6b7280;
+        text-align: center;
+        margin-top: 6px;
+      }
+
+      /* Buttons (center-aligned; colors per your rules). Add more if needed. */
+      .btn {
+        background: orange;
+        color: blue;
+        border: none;
+        padding: 12px 20px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+      }
+      .btn:hover {
+        background: blue;
+        color: orange;
+      }
+      .btn-row {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      /* Simple inline dependency diagram container */
+      .diagram {
+        background: #f8fafc;
+        border: 1px dashed #cbd5e1;
+        border-radius: 12px;
+        padding: 12px;
+      }
+      svg {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      .box {
+        fill: #ffffff;
+        stroke: #0ea5e9;
+        stroke-width: 2;
+        rx: 10;
+      }
+      .box text {
+        fill: #0f172a;
+        font-weight: 700;
+      }
+      .arrow {
+        stroke: #475569;
+        stroke-width: 2.2;
+        marker-end: url(#arrowhead);
+        fill: none;
+      }
+      .legend {
+        font-size: 13px;
+        fill: #334155;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MB72WSHR"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header>
+      InvMIS – Project References (Clean Architecture)
+      <a class="home-button" href="/" title="Go Home">Home</a>
+    </header>
+
+    <main>
+      <div class="wrap grid">
+        <!-- Left: Table & Explanation -->
+        <section class="panel">
+          <h2>রেফারেন্স ম্যাপ (কোন প্রজেক্ট কাকে রেফার করে)</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Project</th>
+                <th>References To (Dependencies)</th>
+                <th>কারণ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>InvMIS.Domain</strong></td>
+                <td>—</td>
+                <td>Core entities ও নিয়ম (POCO classes)। অন্য কারও উপর নির্ভরশীল নয়।</td>
+              </tr>
+              <tr>
+                <td><strong>InvMIS.Application</strong></td>
+                <td>InvMIS.Domain</td>
+                <td>Services/Interfaces ডোমেইন entity ব্যবহার করে; ব্যবসায়িক নিয়ম প্রয়োগ করে।</td>
+              </tr>
+              <tr>
+                <td><strong>InvMIS.Infrastructure</strong></td>
+                <td>InvMIS.Domain, InvMIS.Application</td>
+                <td>EF Core DbContext ও Generic Repository; Application-এর interfaces ইমপ্লিমেন্ট করে।</td>
+              </tr>
+              <tr>
+                <td><strong>InvMIS.API</strong></td>
+                <td>InvMIS.Domain, InvMIS.Application, InvMIS.Infrastructure</td>
+                <td>Controllers → Services call; DI কনফিগারেশন; Swagger/JWT/Seeding ইত্যাদি।</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="note">
+            <strong>Reference Direction:</strong>
+            <div class="code">Domain ⟵ Application ⟵ Infrastructure ⟵ API</div>
+            API সবচেয়ে বাইরের লেয়ার; Domain সবচেয়ে ভেতরের। Dependency সবসময় ভেতরের দিকে নির্দেশ করে।
+          </div>
+
+          <div class="btn-row">
+            <a class="btn" href="#diagram">ডিপেন্ডেন্সি ডায়াগ্রাম দেখুন</a>
+          </div>
+        </section>
+
+        <!-- Right: Visual Diagram -->
+        <section id="diagram" class="panel">
+          <h2 style="margin-bottom:8px;">ভিজ্যুয়াল ডিপেন্ডেন্সি ডায়াগ্রাম</h2>
+          <div class="diagram">
+            <svg viewBox="0 0 760 460" role="img" aria-label="InvMIS dependency diagram">
+              <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+                        refX="10" refY="3.5" orient="auto">
+                  <polygon points="0 0, 10 3.5, 0 7"></polygon>
+                </marker>
+              </defs>
+
+              <!-- Boxes -->
+              <rect class="box" x="60" y="40"  width="260" height="70" />
+              <text x="190" y="85" text-anchor="middle" font-size="18">InvMIS.API (Presentation)</text>
+
+              <rect class="box" x="60" y="150" width="260" height="70" />
+              <text x="190" y="195" text-anchor="middle" font-size="18">InvMIS.Infrastructure (Data Access)</text>
+
+              <rect class="box" x="440" y="150" width="260" height="70" />
+              <text x="570" y="195" text-anchor="middle" font-size="18">InvMIS.Application (Services)</text>
+
+              <rect class="box" x="440" y="260" width="260" height="70" />
+              <text x="570" y="305" text-anchor="middle" font-size="18">InvMIS.Domain (Entities)</text>
+
+              <!-- Arrows -->
+              <line class="arrow" x1="190" y1="110" x2="190" y2="150" />
+              <text class="legend" x="200" y="135">uses</text>
+
+              <line class="arrow" x1="320" y1="185" x2="440" y2="185" />
+              <text class="legend" x="330" y="175">implements calls</text>
+
+              <line class="arrow" x1="570" y1="220" x2="570" y2="260" />
+              <text class="legend" x="580" y="245">depends on</text>
+
+              <!-- Optional notes -->
+              <text class="legend" x="60" y="245">EF Core, DbContext, Repository&lt;T&gt;</text>
+              <text class="legend" x="440" y="365">POCO models, rules</text>
+              <text class="legend" x="60" y="20">Controllers, Swagger, JWT, DI</text>
+            </svg>
+          </div>
+          <p class="caption">ডায়াগ্রামে তীরগুলো dependency (ভেতরের লেয়ারের দিকে) নির্দেশ করছে।</p>
+        </section>
+      </div>
+
+      <section class="wrap panel" style="max-width:1200px;margin:auto;">
+        <h2>ব্যাখ্যা (সংক্ষেপে)</h2>
+        <ul>
+          <li><strong>InvMIS.API</strong> কেবল Controller/Endpoint প্রকাশ করে; এখানে Service গুলো DI এর মাধ্যমে ইনজেক্ট করা হয়।</li>
+          <li><strong>InvMIS.Application</strong> এ business logic থাকে; এখানে Interface ও Service থাকে।</li>
+          <li><strong>InvMIS.Infrastructure</strong> এ বাস্তব data-access (EF Core, Repository, DbContext) থাকে এবং Application-এর Interface ইমপ্লিমেন্ট করা হয়।</li>
+          <li><strong>InvMIS.Domain</strong> এ কেবল Entities/POCO মডেল থাকে—কোনো বাইরের reference নেই (pure core)।</li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Project-wide script (as per your instruction) -->
+    <script src="../main.js"></script>
+  </body>
+</html>
+
+
+<!--pre>
+<h1>📂 InvMIS Solution References</h1>
+<h3>Project...................References To (Dependencies)...কারণ</h3>
+InvMIS.Domain..................❌ (কোনো প্রজেক্টে রেফারেন্স নাই).....Domain হলো Core Layer → অন্য কারো উপর নির্ভর করে না।
+InvMIS.Application.............✅ InvMIS.Domain...................Service & Interfaces ডোমেইন এন্টিটির সাথে কাজ করে।
+InvMIS.Infrastructure..........✅ InvMIS.Domain...................Repository এবং DbContext ডোমেইন এন্টিটি ব্যবহার করে এবং 
+                               ✅ InvMIS.Application....................Application Layer এর Interface ইমপ্লিমেন্ট করে।
+InvMIS.API.....................✅ InvMIS.Application..............API Layer → Controller গুলো Service (Application Layer) ব্যবহার করে।                          
+                               ✅ InvMIS.Infrastructure.................Service এর ইমপ্লিমেন্টেশন (Infrastructure) dependency injection
+                               ✅ InvMIS.Domain.........................দিয়ে এখানে configure করা হয়। Domain entity model গুলোও ব্যবহার হয়।	                                                                                              
+</-pre-->
+

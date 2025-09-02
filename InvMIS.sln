@@ -13,8 +13,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvMIS.Infrastructure", "In
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
-		README.html = README.html
+		Documents\Architecture-and-Data-Flow.html = Documents\Architecture-and-Data-Flow.html
+		Documents\Data-Flow-1.png = Documents\Data-Flow-1.png
+		Documents\Data-Flow-2.png = Documents\Data-Flow-2.png
+		Documents\Data-Flow-3.png = Documents\Data-Flow-3.png
+		Documents\File-and-Folder-Structure.html = Documents\File-and-Folder-Structure.html
+		Documents\HTMLPage1.html = Documents\HTMLPage1.html
+		Documents\HTMLPage2.html = Documents\HTMLPage2.html
+		Documents\HTMLPage3.html = Documents\HTMLPage3.html
+		Documents\HTMLPage4.html = Documents\HTMLPage4.html
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{24F42DDA-72B7-4C50-87A4-848CCA59A764}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +48,10 @@ Global
 		{35788209-C30E-42E2-BAC2-3092CF0E3AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35788209-C30E-42E2-BAC2-3092CF0E3AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35788209-C30E-42E2-BAC2-3092CF0E3AE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24F42DDA-72B7-4C50-87A4-848CCA59A764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24F42DDA-72B7-4C50-87A4-848CCA59A764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24F42DDA-72B7-4C50-87A4-848CCA59A764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24F42DDA-72B7-4C50-87A4-848CCA59A764}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

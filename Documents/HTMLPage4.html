@@ -1,0 +1,115 @@
+﻿<pre>
+# 📘 InvMIS – Architecture & Data Flow Documentation
+
+## 1. Application Layers
+
+The InvMIS application follows **Clean Architecture** principles. Each layer is fully separated for maintainability and scalability.
+
+### a) **Domain Layer (Core Business Entities)**
+
+* Contains Entities (Product, Category, Supplier, Stock, User)
+* Defines the shape of business objects without persistence logic
+* Example: `Product.cs` only contains Id, Name, Price, Quantity
+
+### b) **Application Layer (Business Logic)**
+
+* Contains Interfaces & Services
+* Implements business rules (validation, authorization, calculations)
+* Uses Repositories (from Infrastructure) to access data
+* Example: `ProductService` validates product data before saving
+
+### c) **Infrastructure Layer (Data Access)**
+
+* Contains `DbContext` (EF Core)
+* Implements Generic Repository (CRUD operations)
+* Responsible for interacting with the PostgreSQL database
+* Example: `Repository<Product>` handles `Add`, `Update`, `Delete`
+
+### d) **API Layer (Presentation Layer)**
+
+* Contains Controllers (ProductController, CategoryController, etc.)
+* Exposes RESTful API endpoints
+* Maps incoming HTTP requests → Calls Application Services → Returns responses
+* Example: `/api/products` → `ProductController` → `ProductService`
+
+---
+
+## 2. Component Relationships
+
+```
+[Client / Frontend / Postman / Swagger]
+            │
+            ▼
+    ┌─────────────────────┐
+    │   API Controllers  │ (Presentation Layer)
+    └─────────┬──────────┘
+              │ Calls Services
+              ▼
+    ┌─────────────────────┐
+    │   Application Layer │ (Business Logic)
+    └─────────┬──────────┘
+              │ Uses Repository
+              ▼
+    ┌─────────────────────┐
+    │ Infrastructure Layer│ (Data Access)
+    │  - EF Core          │
+    │  - Repository<T>    │
+    └─────────┬──────────┘
+              │ Maps Entities
+              ▼
+    ┌─────────────────────┐
+    │   Domain Layer      │ (Entities)
+    └─────────────────────┘
+              │
+              ▼
+     [PostgreSQL Database]
+```
+
+---
+
+## 3. Data Flow
+
+### Example: Add a Product
+
+1. **Client** sends `POST /api/products` with JSON body:
+
+   ```json
+   {
+     "name": "Laptop",
+     "price": 1200,
+     "quantity": 10
+   }
+   ```
+
+2. **ProductController** receives the request and calls `IProductService.AddProduct()`.
+
+3. **ProductService** validates the data (e.g., Price > 0, Quantity >= 0).
+
+4. **ProductService** calls `Repository<Product>.Add(product)`.
+
+5. **Repository** uses `InvMISDbContext` to insert data into `Products` table in PostgreSQL.
+
+6. **DbContext** saves the changes → Database stores new Product row.
+
+7. Response flows back → Product details with `Id` returned to client.
+
+---
+
+## 4. Security & Authentication Flow
+
+1. **UserController** issues JWT Token on successful login.
+2. Client includes `Authorization: Bearer <token>` in API calls.
+3. Middleware checks validity of token (Issuer, Audience, Expiry).
+4. If valid → request proceeds, else 401 Unauthorized.
+
+---
+
+## 5. Benefits of This Architecture
+
+* Separation of Concerns (UI, Business Logic, Data)
+* Easy to maintain & scale
+* Flexible: can change Database without affecting Business Logic
+* Secure: supports JWT Authentication and Role-based Authorization
+* Testable: Services and Repositories can be unit tested independently
+
+</pre>

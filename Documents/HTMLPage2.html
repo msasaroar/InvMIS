@@ -1,0 +1,78 @@
+﻿<pre>
+ঠিক আছে Saiful 🙂
+এখানে InvMIS প্রকল্পের **Visual Flow Diagram** দিচ্ছি, যা দেখায় কিভাবে **Entities → Repositories → Services → Controllers → API** কাজ করে।
+
+---
+
+# 🖼️ InvMIS Architecture Flow Diagram
+
+```
+              ┌───────────────┐
+              │   Controllers │
+              │ (API Layer)   │
+              └───────┬───────┘
+                      │ Calls
+                      ▼
+              ┌───────────────┐
+              │    Services   │
+              │ (Application) │
+              └───────┬───────┘
+                      │ Uses
+                      ▼
+              ┌───────────────┐
+              │  Repository   │
+              │ (Infrastructure│
+              │   Generic CRUD)│
+              └───────┬───────┘
+                      │ Access
+                      ▼
+              ┌───────────────┐
+              │   DbContext   │
+              │ (EF Core,     │
+              │   PostgreSQL) │
+              └───────┬───────┘
+                      │ Maps
+                      ▼
+        ┌─────────────┴─────────────┐
+        │        Entities           │
+        │ Product, Category,        │
+        │ Supplier, Stock, User     │
+        └───────────────────────────┘
+```
+
+---
+
+### 🔑 Key Points of the Diagram
+
+1. **Controllers (API Layer)**
+
+   * External requests আসছে এখানে
+   * GET, POST, PUT, DELETE endpoints handle করে
+
+2. **Services (Application Layer)**
+
+   * Business logic handle করে
+   * Validation, transformation, authentication logic রাখে
+
+3. **Repository (Infrastructure Layer)**
+
+   * Generic CRUD methods implement করে
+   * EF Core DbContext এর সাথে directly interact করে
+
+4. **DbContext (Infrastructure Layer)**
+
+   * Database এর সাথে connection রাখে
+   * DbSet<Entity> দ্বারা table mapping করে
+
+5. **Entities (Domain Layer)**
+
+   * Real-world objects represent করে
+   * Product, Category, Supplier, Stock, User
+
+---
+
+Saiful, এই diagram অনুযায়ী এখন তোমার Project **end-to-end ready**।
+
+চাও আমি এখন **F5/`dotnet run` করার পর API test করার জন্য full Swagger walkthrough** বানাই step-by-step?
+
+</pre>
