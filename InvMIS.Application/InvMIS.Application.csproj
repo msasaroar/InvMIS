@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -12,12 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\InvMIS.Domain\InvMIS.Domain.csproj" />
-    <ProjectReference Include="..\InvMIS.Infrastructure\InvMIS.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
