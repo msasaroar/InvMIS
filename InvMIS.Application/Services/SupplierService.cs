@@ -1,20 +1,42 @@
 ﻿using InvMIS.Application.Interfaces;
 using InvMIS.Domain.Entities;
-using InvMIS.Infrastructure.Data;
-using InvMIS.Infrastructure.Repositories;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace InvMIS.Application.Services
 {
     public class SupplierService : ISupplierService
     {
-        private readonly Repository<Supplier> _repo;
+        private readonly IRepository<Supplier> _repo;
 
-        public SupplierService(Repository<Supplier> repo) => _repo = repo;
+        public SupplierService(IRepository<Supplier> repo)
+        {
+            _repo = repo;
+        }
 
-        public void Add(Supplier supplier) => _repo.Add(supplier);
-        public void Delete(int id) => _repo.Delete(id);
-        public IEnumerable<Supplier> GetAll() => _repo.GetAll();
-        public Supplier? GetById(int id) => _repo.GetById(id);
-        public void Update(Supplier supplier) => _repo.Update(supplier);
+        public async Task Add(Supplier supplier)
+        {
+            await _repo.AddAsync(supplier);
+        }
+
+        public async Task Delete(int id)
+        {
+            await _repo.DeleteAsync(id);
+        }
+
+        public async Task<IEnumerable<Supplier>> GetAll()
+        {
+            return await _repo.GetAllAsync();
+        }
+
+        public async Task<Supplier?> GetById(int id)
+        {
+            return await _repo.GetByIdAsync(id);
+        }
+
+        public async Task Update(Supplier supplier)
+        {
+            await _repo.UpdateAsync(supplier);
+        }
     }
 }

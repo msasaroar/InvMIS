@@ -1,7 +1,6 @@
 ﻿using System.Text;
 using InvMIS.Application.Interfaces;
 using InvMIS.Application.Services;
-using InvMIS.Domain.Entities;
 using InvMIS.Infrastructure.Data;
 using InvMIS.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -13,28 +12,26 @@ namespace InvMIS.API
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // PostgreSQL connection
+            // 🔗 PostgreSQL connection
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddDbContext<InvMISDbContext>(options =>
                 options.UseNpgsql(connectionString));
 
-            // Dependency Injection
-            builder.Services.AddScoped<Repository<Product>>();
-            builder.Services.AddScoped<Repository<Category>>();
-            builder.Services.AddScoped<Repository<Supplier>>();
-            builder.Services.AddScoped<Repository<Stock>>();
-            builder.Services.AddScoped<Repository<User>>();
+            // ✅ Dependency Injection for Generic Repository
+            builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
+            // ✅ Dependency Injection for Services
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<ISupplierService, SupplierService>();
             builder.Services.AddScoped<IStockService, StockService>();
             builder.Services.AddScoped<IUserService, UserService>();
 
+            // ✅ Add Controllers
             builder.Services.AddControllers();
 
             // 🔐 JWT Authentication
@@ -64,7 +61,12 @@ namespace InvMIS.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "InvMIS API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "InvMIS API",
+                    Version = "v1",
+                    Description = "Inventory Management Information System API"
+                });
 
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
@@ -73,7 +75,7 @@ namespace InvMIS.API
                     Scheme = "Bearer",
                     BearerFormat = "JWT",
                     In = ParameterLocation.Header,
-                    Description = "Enter JWT token as: Bearer {your token}"
+                    Description = "Enter JWT token as: **Bearer {your token}**"
                 });
 
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
@@ -94,13 +96,14 @@ namespace InvMIS.API
 
             var app = builder.Build();
 
-            // Seed Admin User
+            // ✅ Seed Admin User (async)
             using (var scope = app.Services.CreateScope())
             {
                 var context = scope.ServiceProvider.GetRequiredService<InvMISDbContext>();
-                DbSeeder.SeedAdminAsync(context).Wait();
+                await DbSeeder.SeedAdminAsync(context);
             }
 
+            // ✅ Middleware pipeline
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -114,7 +117,7 @@ namespace InvMIS.API
 
             app.MapControllers();
 
-            app.Run();
+            await app.RunAsync();
         }
     }
 }

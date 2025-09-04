@@ -1,13 +1,15 @@
 ﻿using InvMIS.Domain.Entities;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace InvMIS.Application.Interfaces
 {
     public interface IStockService
     {
-        IEnumerable<Stock> GetAll();
-        Stock? GetById(int id);
-        void Add(Stock stock);
-        void Update(Stock stock);
-        void Delete(int id);
+        Task AddAsync(Stock stock);
+        Task UpdateAsync(Stock stock);
+        Task DeleteAsync(int id);
+        Task<Stock?> GetByIdAsync(int id);
+        Task<IEnumerable<Stock>> GetAllAsync();
     }
 }

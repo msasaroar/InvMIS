@@ -1,20 +1,27 @@
 ﻿using InvMIS.Application.Interfaces;
 using InvMIS.Domain.Entities;
-using InvMIS.Infrastructure.Data;
-using InvMIS.Infrastructure.Repositories;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace InvMIS.Application.Services
 {
     public class StockService : IStockService
     {
-        private readonly Repository<Stock> _repo;
+        private readonly IRepository<Stock> _repo;
 
-        public StockService(Repository<Stock> repo) => _repo = repo;
+        public StockService(IRepository<Stock> repo)
+        {
+            _repo = repo;
+        }
 
-        public void Add(Stock stock) => _repo.Add(stock);
-        public void Delete(int id) => _repo.Delete(id);
-        public IEnumerable<Stock> GetAll() => _repo.GetAll();
-        public Stock? GetById(int id) => _repo.GetById(id);
-        public void Update(Stock stock) => _repo.Update(stock);
+        public Task AddAsync(Stock stock) => _repo.AddAsync(stock);
+
+        public Task DeleteAsync(int id) => _repo.DeleteAsync(id);
+
+        public Task<IEnumerable<Stock>> GetAllAsync() => _repo.GetAllAsync();
+
+        public Task<Stock?> GetByIdAsync(int id) => _repo.GetByIdAsync(id);
+
+        public Task UpdateAsync(Stock stock) => _repo.UpdateAsync(stock);
     }
 }

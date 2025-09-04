@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using InvMIS.Application.DTOs;
 
-namespace InvMIS.Application.Validation
+namespace InvMIS.Application.Validators
 {
     public class ProductValidator : AbstractValidator<ProductDto>
     {

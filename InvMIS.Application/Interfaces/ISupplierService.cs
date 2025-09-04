@@ -1,13 +1,15 @@
 ﻿using InvMIS.Domain.Entities;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace InvMIS.Application.Interfaces
 {
     public interface ISupplierService
     {
-        IEnumerable<Supplier> GetAll();
-        Supplier? GetById(int id);
-        void Add(Supplier supplier);
-        void Update(Supplier supplier);
-        void Delete(int id);
+        Task<IEnumerable<Supplier>> GetAll();
+        Task<Supplier?> GetById(int id);
+        Task Add(Supplier supplier);
+        Task Update(Supplier supplier);
+        Task Delete(int id);
     }
 }

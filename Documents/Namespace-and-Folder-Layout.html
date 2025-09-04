@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Namespace</title>
+  <!-- Google Tag Manager (head) - container: GTM-MB72WSHR -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MB72WSHR');
+  </script>
+
+  <style>
+    /* User's requested styling rules */
+    header {
+      background-color: green;
+      color: black;
+      font-weight: bold;
+      font-size: 35px;
+      text-align: center;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    body {
+      background-color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .home-button {
+      position: absolute;
+      border-radius: 8px;
+      font-size: 16px;
+      left: 15px;
+      top: 10px;
+      background-color: orange;
+      color: blue;
+      padding: 15px 30px;
+      text-decoration: none;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      border: 5px solid darkgreen;
+      border-radius: 6px;
+      z-index: 1001;
+    }
+    .home-button:hover {
+      background-color: blue;
+      color: orange;
+    }
+
+    main {
+      padding: 75px 20px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Buttons: center-align (except Home which is absolute inside header) */
+    .center-btn {
+      display: inline-block;
+      background-color: orange;
+      color: blue;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      margin: 16px 0;
+    }
+    .center-btn:hover {
+      background-color: blue;
+      color: orange;
+    }
+
+    /* Styling for the pre block to make it readable */
+    pre.repo-pre {
+      background: #f7f7f7;
+      border: 1px solid #ddd;
+      padding: 18px;
+      overflow: auto;
+      white-space: pre-wrap; /* allow wrapping for narrow screens */
+      font-size: 14px;
+      line-height: 1.5;
+      border-radius: 6px;
+    }
+
+    /* make content responsive */
+    @media (max-width: 600px) {
+      header { font-size: 22px; padding: 14px 0; }
+      .home-button { padding: 10px 16px; left: 8px; top: 8px; font-size: 14px; }
+      .center-btn { font-size: 14px; padding: 10px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- GTM (noscript) - required in body -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MB72WSHR"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <header>
+    <a class="home-button" href="../index.html" title="Home">Home</a>
+      Folder Layout & Namespace
+  </header>
+
+  <main>
+    <pre class="repo-pre">
+Folder layout (recommended):
+InvMIS/					=>[ Folder for Solution(.sln) ]
+ 	InvMIS.API/			=>[ Project : InvMIS.API (ASP.NET Core Web API) ]
+ 	   Controllers/
+		Program.cs
+ 		appsettings.json
+ 	InvMIS.Application/		=>[ Project : InvMIS.Application (Class Library) - Interfaces & Services ]
+ 	   Interfaces/
+ 	   Services/
+
+
+ 	   DTOs/
+ 	   Validation/
+ 	InvMIS.Domain/		=>[ Project : InvMIS.Domain (Class Library) - Entities ]
+ 	   Entities/
+ 	InvMIS.Infrastructure/	=>[ Project : InvMIS.Infrastructure (Class Library) - DbContext & Repositories	]
+ 	   Data/
+ 	   Repositories/
+
+নিম্নোক্ত লাইন গুলোতে থাকা .cs ফাইল সমূহের namespace সমূহের যাথাক্রমে তালিকা দাও
+1. Infrastructure
+InvMIS\InvMIS.Infrastructure\Repositories\Repository.cs
+InvMIS\InvMIS.Infrastructure\Data\InvMISDbContext.cs
+InvMIS\InvMIS.Infrastructure\Data\DbSeeder.cs
+
+2. Domain
+InvMIS\InvMIS.Domain\Entities\User.cs
+InvMIS\InvMIS.Domain\Entities\Supplier.cs
+InvMIS\InvMIS.Domain\Entities\Stock.cs
+InvMIS\InvMIS.Domain\Entities\Product.cs
+InvMIS\InvMIS.Domain\Entities\Category.cs
+
+3. Application
+InvMIS\InvMIS.Application\Validators\ProductValidator.cs
+InvMIS\InvMIS.Application\Services\UserService.cs
+InvMIS\InvMIS.Application\Services\SupplierService.cs
+InvMIS\InvMIS.Application\Services\StockService.cs
+InvMIS\InvMIS.Application\Services\ProductService.cs
+InvMIS\InvMIS.Application\Services\CategoryService.cs
+InvMIS\InvMIS.Application\Interfaces\IUserService.cs
+InvMIS\InvMIS.Application\Interfaces\ISupplierService.cs
+InvMIS\InvMIS.Application\Interfaces\IStockService.cs
+InvMIS\InvMIS.Application\Interfaces\IRepository.cs
+InvMIS\InvMIS.Application\Interfaces\IProductServic.cs
+InvMIS\InvMIS.Application\Interfaces\ICategoryService.cs
+InvMIS\InvMIS.Application\DTOs\ProductDto.cs
+
+4. API
+InvMIS\InvMIS.API\Program.cs
+InvMIS\InvMIS.API\Middleware\ExceptionMiddleware.cs
+InvMIS\InvMIS.API\Controllers\SupplierController.cs
+InvMIS\InvMIS.API\Controllers\StockController.cs
+InvMIS\InvMIS.API\Controllers\ProductController.cs
+InvMIS\InvMIS.API\Controllers\CategoryController.cs
+InvMIS\InvMIS.API\Controllers\AuthController.cs
+
+
+প্রদত্ত .cs ফাইলগুলো অনুযায়ী প্রত্যেকটি ফাইলের সম্ভাব্য namespace গুলো নিচে তালিকাভুক্ত করলাম। 
+আমি আপনার solution structure অনুযায়ী ধরে নিয়েছি যে namespace সাধারণত project এর নাম + folder path অনুসারে হয়।
+
+1. Infrastructure
+InvMIS\InvMIS.Infrastructure\Repositories\Repository.cs
+InvMIS\InvMIS.Infrastructure\Data\InvMISDbContext.cs
+InvMIS\InvMIS.Infrastructure\Data\DbSeeder.cs
+
+2. Domain
+InvMIS\InvMIS.Domain\Entities\User.cs
+InvMIS\InvMIS.Domain\Entities\Supplier.cs
+InvMIS\InvMIS.Domain\Entities\Stock.cs
+InvMIS\InvMIS.Domain\Entities\Product.cs
+InvMIS\InvMIS.Domain\Entities\Category.cs
+
+3. Application
+InvMIS\InvMIS.Application\Validators\ProductValidator.cs
+InvMIS\InvMIS.Application\Services\UserService.cs
+InvMIS\InvMIS.Application\Services\SupplierService.cs
+InvMIS\InvMIS.Application\Services\StockService.cs
+InvMIS\InvMIS.Application\Services\ProductService.cs
+InvMIS\InvMIS.Application\Services\CategoryService.cs
+InvMIS\InvMIS.Application\Interfaces\IUserService.cs
+InvMIS\InvMIS.Application\Interfaces\ISupplierService.cs
+InvMIS\InvMIS.Application\Interfaces\IStockService.cs
+InvMIS\InvMIS.Application\Interfaces\IRepository.cs
+InvMIS\InvMIS.Application\Interfaces\IProductServic.cs
+InvMIS\InvMIS.Application\Interfaces\ICategoryService.cs
+InvMIS\InvMIS.Application\DTOs\ProductDto.cs
+
+4. API
+InvMIS\InvMIS.API\Program.cs
+InvMIS\InvMIS.API\Middleware\ExceptionMiddleware.cs
+InvMIS\InvMIS.API\Controllers\SupplierController.cs
+InvMIS\InvMIS.API\Controllers\StockController.cs
+InvMIS\InvMIS.API\Controllers\ProductController.cs
+InvMIS\InvMIS.API\Controllers\CategoryController.cs
+InvMIS\InvMIS.API\Controllers\AuthController.cs
+
+1. Infrastructure
+ফাইল	সম্ভাব্য namespace
+Repository.cs	InvMIS.Infrastructure.Repositories
+InvMISDbContext.cs	InvMIS.Infrastructure.Data
+DbSeeder.cs	InvMIS.Infrastructure.Data
+
+2. Domain
+ফাইল	সম্ভাব্য namespace
+User.cs	InvMIS.Domain.Entities
+Supplier.cs	InvMIS.Domain.Entities
+Stock.cs	InvMIS.Domain.Entities
+Product.cs	InvMIS.Domain.Entities
+Category.cs	InvMIS.Domain.Entities
+
+3. Application
+ফাইল	সম্ভাব্য namespace
+ProductValidator.cs	InvMIS.Application.Validators
+UserService.cs	InvMIS.Application.Services
+SupplierService.cs	InvMIS.Application.Services
+StockService.cs	InvMIS.Application.Services
+ProductService.cs	InvMIS.Application.Services
+CategoryService.cs	InvMIS.Application.Services
+IUserService.cs	InvMIS.Application.Interfaces
+ISupplierService.cs	InvMIS.Application.Interfaces
+IStockService.cs	InvMIS.Application.Interfaces
+IRepository.cs	InvMIS.Application.Interfaces
+IProductServic.cs	InvMIS.Application.Interfaces
+ICategoryService.cs	InvMIS.Application.Interfaces
+ProductDto.cs	InvMIS.Application.DTOs
+
+4. API
+ফাইল	সম্ভাব্য namespace
+Program.cs	InvMIS.API
+ExceptionMiddleware.cs	InvMIS.API.Middleware
+SupplierController.cs	InvMIS.API.Controllers
+StockController.cs	InvMIS.API.Controllers
+ProductController.cs	InvMIS.API.Controllers
+CategoryController.cs	InvMIS.API.Controllers
+AuthController.cs	InvMIS.API.Controllers
+
+
+প্রদত্ত ফাইলগুলোর জন্য একটি Namespace Reference Map বানিয়ে দিলাম। 
+এটিকে copy-paste করে project এ ব্যবহার করা যাবে:
+
+// ==================== Infrastructure ====================
+namespace InvMIS.Infrastructure.Repositories
+{
+    // Repository.cs
+}
+
+namespace InvMIS.Infrastructure.Data
+{
+    // InvMISDbContext.cs
+    // DbSeeder.cs
+}
+
+// ==================== Domain ====================
+namespace InvMIS.Domain.Entities
+{
+    // User.cs
+    // Supplier.cs
+    // Stock.cs
+    // Product.cs
+    // Category.cs
+}
+
+// ==================== Application ====================
+namespace InvMIS.Application.Validators
+{
+    // ProductValidator.cs
+}
+
+namespace InvMIS.Application.Services
+{
+    // UserService.cs
+    // SupplierService.cs
+    // StockService.cs
+    // ProductService.cs
+    // CategoryService.cs
+}
+
+namespace InvMIS.Application.Interfaces
+{
+    // IUserService.cs
+    // ISupplierService.cs
+    // IStockService.cs
+    // IRepository.cs
+    // IProductServic.cs
+    // ICategoryService.cs
+}
+
+namespace InvMIS.Application.DTOs
+{
+    // ProductDto.cs
+}
+
+// ==================== API ====================
+namespace InvMIS.API
+{
+    // Program.cs
+}
+
+namespace InvMIS.API.Middleware
+{
+    // ExceptionMiddleware.cs
+}
+
+namespace InvMIS.API.Controllers
+{
+    // SupplierController.cs
+    // StockController.cs
+    // ProductController.cs
+    // CategoryController.cs
+    // AuthController.cs
+}
+    </pre>
+  </main>
+</body>
+</html>

@@ -1,77 +1,40 @@
-﻿/*
-using InvMIS.Application.Interfaces;
+﻿using InvMIS.Application.Interfaces;
 using InvMIS.Domain.Entities;
-using InvMIS.Infrastructure.Repositories;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace InvMIS.Application.Services
 {
     public class ProductService : IProductService
     {
-        private readonly Repository<Product> _productRepository;
+        private readonly IRepository<Product> _repo;
 
-        public ProductService(Repository<Product> productRepository)
+        public ProductService(IRepository<Product> repo)
         {
-            _productRepository = productRepository;
+            _repo = repo;
         }
 
-        public async Task<IEnumerable<Product>> GetAllProductsAsync()
+        public async Task AddAsync(Product product)
         {
-            return await _productRepository.GetAllAsync();
+            await _repo.AddAsync(product);
         }
 
-        public async Task<Product> GetProductByIdAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            return await _productRepository.GetByIdAsync(id);
+            await _repo.DeleteAsync(id);
         }
 
-        public async Task<Product> AddProductAsync(Product product)
+        public async Task<IEnumerable<Product>> GetAllAsync()
         {
-            // Simple Validation Example
-            if (string.IsNullOrWhiteSpace(product.Name))
-                throw new System.Exception("Product Name is required.");
-
-            await _productRepository.AddAsync(product);
-            return product;
+            return await _repo.GetAllAsync();
         }
 
-        public async Task<Product> UpdateProductAsync(Product product)
+        public async Task<Product?> GetByIdAsync(int id)
         {
-            if (product.Id <= 0)
-                throw new System.Exception("Invalid Product Id.");
-
-            await _productRepository.UpdateAsync(product);
-            return product;
+            return await _repo.GetByIdAsync(id);
         }
 
-        public async Task<bool> DeleteProductAsync(int id)
+        public async Task UpdateAsync(Product product)
         {
-            await _productRepository.DeleteAsync(id);
-            return true;
+            await _repo.UpdateAsync(product);
         }
     }
 }
-*/
-
-using InvMIS.Application.Interfaces;
-using InvMIS.Domain.Entities;
-using InvMIS.Infrastructure.Data;
-using InvMIS.Infrastructure.Repositories;
-
-namespace InvMIS.Application.Services
-{
-    public class ProductService : IProductService
-    {
-        private readonly Repository<Product> _repo;
-
-        public ProductService(Repository<Product> repo) => _repo = repo;
-
-        public void AddProduct(Product product) => _repo.Add(product);
-        public void DeleteProduct(int id) => _repo.Delete(id);
-        public IEnumerable<Product> GetAllProducts() => _repo.GetAll();
-        public Product? GetProductById(int id) => _repo.GetById(id);
-        public void UpdateProduct(Product product) => _repo.Update(product);
-    }
-}
-

@@ -1,4 +1,5 @@
 ﻿using InvMIS.Application.Interfaces;
+using InvMIS.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -23,14 +24,22 @@ namespace InvMIS.API.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(string username, string password)
         {
-            var user = await _userService.RegisterAsync(username, password);
+            var user = new User
+            {
+                Username = username,
+                Password = password,
+                Role = "User"
+            };
+
+            await _userService.AddUserAsync(user);
+
             return Ok(new { user.Id, user.Username, user.Role });
         }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login(string username, string password)
         {
-            var user = await _userService.LoginAsync(username, password);
+            var user = await _userService.AuthenticateAsync(username, password);
             if (user == null) return Unauthorized("Invalid credentials");
 
             var jwtSettings = _configuration.GetSection("Jwt");

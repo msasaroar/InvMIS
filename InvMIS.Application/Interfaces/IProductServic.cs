@@ -1,32 +1,10 @@
-﻿/*
-using InvMIS.Domain.Entities;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using InvMIS.Domain.Entities;
 
-namespace InvMIS.Application.Interfaces
+public interface IProductService
 {
-    public interface IProductService
-    {
-        Task<IEnumerable<Product>> GetAllProductsAsync();
-        Task<Product> GetProductByIdAsync(int id);
-        Task<Product> AddProductAsync(Product product);
-        Task<Product> UpdateProductAsync(Product product);
-        Task<bool> DeleteProductAsync(int id);
-    }
+    Task AddAsync(Product product);
+    Task DeleteAsync(int id);
+    Task<IEnumerable<Product>> GetAllAsync();
+    Task<Product?> GetByIdAsync(int id);
+    Task UpdateAsync(Product product);
 }
-*/
-
-using InvMIS.Domain.Entities;
-
-namespace InvMIS.Application.Interfaces
-{
-    public interface IProductService
-    {
-        IEnumerable<Product> GetAllProducts();
-        Product? GetProductById(int id);
-        void AddProduct(Product product);
-        void UpdateProduct(Product product);
-        void DeleteProduct(int id);
-    }
-}
-

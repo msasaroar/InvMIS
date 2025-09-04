@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InvMIS.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09a301882e0bcabaaaf45dc80557427c87729335")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0300345486885ca1bc39ba82a49101a985d746ee")]
 [assembly: System.Reflection.AssemblyProductAttribute("InvMIS.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InvMIS.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

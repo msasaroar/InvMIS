@@ -1,15 +1,36 @@
-﻿namespace InvMIS.Domain.Entities
+﻿/*
+using System;
+
+namespace InvMIS.Domain.Entities
 {
     public class User
     {
         public int Id { get; set; }
         public string Username { get; set; } = null!;
-        public string PasswordHash { get; set; } = null!;
-        public string Role { get; set; } = "User"; // Default role
 
-        // Optional fields
-        public string? FullName { get; set; }
-        public string? Email { get; set; }
+        public string Password { get; set; } = null!; // <-- Add this
+
+        public string Role { get; set; } = "User";
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }
+*/
 
+using System;
+
+namespace InvMIS.Domain.Entities
+{
+    public class User
+    {
+        public int Id { get; set; }
+        public string Username { get; set; } = null!;
+
+        // এখন hashed password রাখবে
+        public string PasswordHash { get; set; } = null!;
+
+        public string Role { get; set; } = "User";
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
+    }
+}
