@@ -71,11 +71,11 @@ namespace InvMIS.API
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
-                    Type = SecuritySchemeType.ApiKey,
+                    Type = SecuritySchemeType.Http,
                     Scheme = "Bearer",
                     BearerFormat = "JWT",
                     In = ParameterLocation.Header,
-                    Description = "Enter JWT token as: **Bearer {your token}**"
+                    Description = "Enter JWT token as: **{your token}**"
                 });
 
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
