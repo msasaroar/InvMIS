@@ -24,11 +24,7 @@ namespace InvMIS.Infrastructure.Data
                     CreatedAt = now,
                     UpdatedAt = now
                 };
-
-                // var hasher = new PasswordHasher<User>();
-                // var hashPassword = hasher.HashPassword(adminUser, "Admin@123");
-                // adminUser.Password = hashPassword;
-
+                
                 context.Users.Add(adminUser);
                 await context.SaveChangesAsync();
             }

@@ -111,6 +111,7 @@ namespace InvMIS.API
                 {
                     c.EnablePersistAuthorization();
                     c.EnableFilter();
+                    c.EnableTryItOutByDefault();
                 });
             }
 

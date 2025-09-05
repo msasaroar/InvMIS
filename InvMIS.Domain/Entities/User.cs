@@ -6,7 +6,7 @@ namespace InvMIS.Domain.Entities
     {
         public int Id { get; set; }
         public string Username { get; set; } = null!;
-        public string Password { get; set; } = null!;   // Password property আগের মতোই থাকবে
+        public string Password { get; set; } = null!;
         public string Role { get; set; } = "User";
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
