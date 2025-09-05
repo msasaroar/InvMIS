@@ -18,42 +18,42 @@ namespace InvMIS.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            var products = _productService.GetAllProducts();
+            var products = await _productService.GetAllAsync();
             return Ok(products);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var product = _productService.GetProductById(id);
+            var product = await _productService.GetByIdAsync(id);
             if (product == null) return NotFound();
             return Ok(product);
         }
 
         [HttpPost]
         [Authorize(Roles = "Admin")]  // Only Admin can create
-        public IActionResult Create(Product product)
+        public async Task<IActionResult> Create(Product product)
         {
-            _productService.AddProduct(product);
+            await _productService.AddAsync(product);
             return Ok(product);
         }
 
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]  // Only Admin can update
-        public IActionResult Update(int id, Product product)
+        public async Task<IActionResult> Update(int id, Product product)
         {
             if (id != product.Id) return BadRequest();
-            _productService.UpdateProduct(product);
+            await _productService.UpdateAsync(product);
             return NoContent();
         }
 
         [HttpDelete("{id}")]
         [Authorize(Roles = "Admin")]  // Only Admin can delete
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            _productService.DeleteProduct(id);
+            await _productService.DeleteAsync(id);
             return NoContent();
         }
     }

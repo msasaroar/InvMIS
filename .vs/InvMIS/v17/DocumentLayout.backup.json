@@ -3,36 +3,28 @@
   "WorkspaceRootPath": "D:\\DotNetProjects\\InvMIS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{14DD9BD5-9D33-4D12-B8A0-715292D1E0F0}|InvMIS.Application\\InvMIS.Application.csproj|d:\\dotnetprojects\\invmis\\invmis.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14DD9BD5-9D33-4D12-B8A0-715292D1E0F0}|InvMIS.Application\\InvMIS.Application.csproj|solutionrelative:invmis.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C7CD3B2-E35A-4A68-AD01-21B0BA089F4C}|InvMIS.API\\InvMIS.API.csproj|d:\\dotnetprojects\\invmis\\invmis.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C7CD3B2-E35A-4A68-AD01-21B0BA089F4C}|InvMIS.API\\InvMIS.API.csproj|solutionrelative:invmis.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14DD9BD5-9D33-4D12-B8A0-715292D1E0F0}|InvMIS.Application\\InvMIS.Application.csproj|d:\\dotnetprojects\\invmis\\invmis.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14DD9BD5-9D33-4D12-B8A0-715292D1E0F0}|InvMIS.Application\\InvMIS.Application.csproj|solutionrelative:invmis.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C7CD3B2-E35A-4A68-AD01-21B0BA089F4C}|InvMIS.API\\InvMIS.API.csproj|d:\\dotnetprojects\\invmis\\invmis.api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C7CD3B2-E35A-4A68-AD01-21B0BA089F4C}|InvMIS.API\\InvMIS.API.csproj|solutionrelative:invmis.api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A22E284-7EC0-4024-AF5E-A4EBE544B38D}|InvMIS.Domain\\InvMIS.Domain.csproj|d:\\dotnetprojects\\invmis\\invmis.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A22E284-7EC0-4024-AF5E-A4EBE544B38D}|InvMIS.Domain\\InvMIS.Domain.csproj|solutionrelative:invmis.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C7CD3B2-E35A-4A68-AD01-21B0BA089F4C}|InvMIS.API\\InvMIS.API.csproj|d:\\dotnetprojects\\invmis\\invmis.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C7CD3B2-E35A-4A68-AD01-21B0BA089F4C}|InvMIS.API\\InvMIS.API.csproj|solutionrelative:invmis.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35788209-C30E-42E2-BAC2-3092CF0E3AE0}|InvMIS.Infrastructure\\InvMIS.Infrastructure.csproj|d:\\dotnetprojects\\invmis\\invmis.infrastructure\\data\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35788209-C30E-42E2-BAC2-3092CF0E3AE0}|InvMIS.Infrastructure\\InvMIS.Infrastructure.csproj|solutionrelative:invmis.infrastructure\\data\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{35788209-C30E-42E2-BAC2-3092CF0E3AE0}|InvMIS.Infrastructure\\InvMIS.Infrastructure.csproj|d:\\dotnetprojects\\invmis\\invmis.infrastructure\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{35788209-C30E-42E2-BAC2-3092CF0E3AE0}|InvMIS.Infrastructure\\InvMIS.Infrastructure.csproj|solutionrelative:invmis.infrastructure\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A22E284-7EC0-4024-AF5E-A4EBE544B38D}|InvMIS.Domain\\InvMIS.Domain.csproj|d:\\dotnetprojects\\invmis\\invmis.domain\\entities\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A22E284-7EC0-4024-AF5E-A4EBE544B38D}|InvMIS.Domain\\InvMIS.Domain.csproj|solutionrelative:invmis.domain\\entities\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C7CD3B2-E35A-4A68-AD01-21B0BA089F4C}|InvMIS.API\\InvMIS.API.csproj|d:\\dotnetprojects\\invmis\\invmis.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9C7CD3B2-E35A-4A68-AD01-21B0BA089F4C}|InvMIS.API\\InvMIS.API.csproj|solutionrelative:invmis.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A22E284-7EC0-4024-AF5E-A4EBE544B38D}|InvMIS.Domain\\InvMIS.Domain.csproj|d:\\dotnetprojects\\invmis\\invmis.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A22E284-7EC0-4024-AF5E-A4EBE544B38D}|InvMIS.Domain\\InvMIS.Domain.csproj|solutionrelative:invmis.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A22E284-7EC0-4024-AF5E-A4EBE544B38D}|InvMIS.Domain\\InvMIS.Domain.csproj|d:\\dotnetprojects\\invmis\\invmis.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A22E284-7EC0-4024-AF5E-A4EBE544B38D}|InvMIS.Domain\\InvMIS.Domain.csproj|solutionrelative:invmis.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35788209-C30E-42E2-BAC2-3092CF0E3AE0}|InvMIS.Infrastructure\\InvMIS.Infrastructure.csproj|d:\\dotnetprojects\\invmis\\invmis.infrastructure\\data\\invmisdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35788209-C30E-42E2-BAC2-3092CF0E3AE0}|InvMIS.Infrastructure\\InvMIS.Infrastructure.csproj|solutionrelative:invmis.infrastructure\\data\\invmisdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14DD9BD5-9D33-4D12-B8A0-715292D1E0F0}|InvMIS.Application\\InvMIS.Application.csproj|d:\\dotnetprojects\\invmis\\invmis.application\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{14DD9BD5-9D33-4D12-B8A0-715292D1E0F0}|InvMIS.Application\\InvMIS.Application.csproj|solutionrelative:invmis.application\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,111 +34,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Application\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "InvMIS.Application\\Interfaces\\IUserService.cs",
-              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Application\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "InvMIS.Application\\Interfaces\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.API\\Program.cs",
+              "RelativeDocumentMoniker": "InvMIS.API\\Program.cs",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.API\\Program.cs",
+              "RelativeToolTip": "InvMIS.API\\Program.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T18:22:21.02Z",
+              "WhenOpened": "2025-09-05T06:34:12.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Application\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "InvMIS.Application\\Services\\UserService.cs",
-              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Application\\Services\\UserService.cs",
-              "RelativeToolTip": "InvMIS.Application\\Services\\UserService.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAkwDAAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.API\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "InvMIS.API\\Controllers\\CategoryController.cs",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.API\\Controllers\\CategoryController.cs*",
+              "RelativeToolTip": "InvMIS.API\\Controllers\\CategoryController.cs*",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T18:15:11.103Z",
+              "WhenOpened": "2025-09-05T06:33:41.031Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Domain\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "InvMIS.Domain\\Entities\\User.cs",
-              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Domain\\Entities\\User.cs",
-              "RelativeToolTip": "InvMIS.Domain\\Entities\\User.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAUwCQAAAAAAAAAAAAAAA==",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "InvMIS.API\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "InvMIS.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T18:12:30.716Z",
+              "WhenOpened": "2025-09-05T06:33:38.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Infrastructure\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "InvMIS.Infrastructure\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Infrastructure\\Properties\\launchSettings.json",
+              "RelativeToolTip": "InvMIS.Infrastructure\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAEAAAAAAAAAAAASwAgAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-05T06:32:17.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "InvMIS.API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "InvMIS.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAEAAAAAAAAAAAASwAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-05T06:31:54.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Application\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "InvMIS.Application\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Application\\Properties\\launchSettings.json",
+              "RelativeToolTip": "InvMIS.Application\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAEAAAAAAAAAAAASwAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-05T06:31:26.048Z",
               "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Supplier.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Domain\\Entities\\Supplier.cs",
-              "RelativeDocumentMoniker": "InvMIS.Domain\\Entities\\Supplier.cs",
-              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Domain\\Entities\\Supplier.cs",
-              "RelativeToolTip": "InvMIS.Domain\\Entities\\Supplier.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowBoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T17:53:54.551Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Category.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Domain\\Entities\\Category.cs",
-              "RelativeDocumentMoniker": "InvMIS.Domain\\Entities\\Category.cs",
-              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Domain\\Entities\\Category.cs",
-              "RelativeToolTip": "InvMIS.Domain\\Entities\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T17:53:09.101Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Product.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Domain\\Entities\\Product.cs",
-              "RelativeDocumentMoniker": "InvMIS.Domain\\Entities\\Product.cs",
-              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Domain\\Entities\\Product.cs",
-              "RelativeToolTip": "InvMIS.Domain\\Entities\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T17:50:55.828Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "InvMISDbContext.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Infrastructure\\Data\\InvMISDbContext.cs",
-              "RelativeDocumentMoniker": "InvMIS.Infrastructure\\Data\\InvMISDbContext.cs",
-              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Infrastructure\\Data\\InvMISDbContext.cs",
-              "RelativeToolTip": "InvMIS.Infrastructure\\Data\\InvMISDbContext.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAUwCwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T17:45:01.611Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DbSeeder.cs",
-              "DocumentMoniker": "D:\\DotNetProjects\\InvMIS\\InvMIS.Infrastructure\\Data\\DbSeeder.cs",
-              "RelativeDocumentMoniker": "InvMIS.Infrastructure\\Data\\DbSeeder.cs",
-              "ToolTip": "D:\\DotNetProjects\\InvMIS\\InvMIS.Infrastructure\\Data\\DbSeeder.cs",
-              "RelativeToolTip": "InvMIS.Infrastructure\\Data\\DbSeeder.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAqwCgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T17:43:01.882Z",
-              "EditorCaption": ""
             }
           ]
         }

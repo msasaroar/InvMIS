@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InvMIS.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0300345486885ca1bc39ba82a49101a985d746ee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82a5ebbda73c59e8f27a77ff3804c4462ae86251")]
 [assembly: System.Reflection.AssemblyProductAttribute("InvMIS.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InvMIS.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

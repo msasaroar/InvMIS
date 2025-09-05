@@ -2,6 +2,7 @@
 using InvMIS.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace InvMIS.API.Controllers
 {
@@ -18,38 +19,42 @@ namespace InvMIS.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll() => Ok(_service.GetAll());
+        public async Task<IActionResult> GetAll()
+        {
+            var stocks = await _service.GetAllAsync();
+            return Ok(stocks);
+        }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var stock = _service.GetById(id);
+            var stock = await _service.GetByIdAsync(id);
             if (stock == null) return NotFound();
             return Ok(stock);
         }
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        public IActionResult Create(Stock stock)
+        public async Task<IActionResult> Create(Stock stock)
         {
-            _service.Add(stock);
+            await _service.AddAsync(stock);
             return Ok(stock);
         }
 
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
-        public IActionResult Update(int id, Stock stock)
+        public async Task<IActionResult> Update(int id, Stock stock)
         {
             if (id != stock.Id) return BadRequest();
-            _service.Update(stock);
+            await _service.UpdateAsync(stock);
             return NoContent();
         }
 
         [HttpDelete("{id}")]
         [Authorize(Roles = "Admin")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            _service.Delete(id);
+            await _service.DeleteAsync(id);
             return NoContent();
         }
     }

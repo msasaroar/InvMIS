@@ -18,38 +18,42 @@ namespace InvMIS.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll() => Ok(_service.GetAll());
+        public async Task<IActionResult> GetAll()
+        {
+            var categories = await _service.GetAllAsync();
+            return Ok(categories);
+        }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var category = _service.GetById(id);
+            var category = await _service.GetByIdAsync(id);
             if (category == null) return NotFound();
             return Ok(category);
         }
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        public IActionResult Create(Category category)
+        public async Task<IActionResult> Create(Category category)
         {
-            _service.Add(category);
+            await _service.AddAsync(category);
             return Ok(category);
         }
 
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
-        public IActionResult Update(int id, Category category)
+        public async Task<IActionResult> Update(int id, Category category)
         {
             if (id != category.Id) return BadRequest();
-            _service.Update(category);
+            await _service.UpdateAsync(category);
             return NoContent();
         }
 
         [HttpDelete("{id}")]
         [Authorize(Roles = "Admin")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            _service.Delete(id);
+            await _service.DeleteAsync(id);
             return NoContent();
         }
     }
