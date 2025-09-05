@@ -20,7 +20,7 @@ namespace InvMIS.Infrastructure.Data
                 {
                     Username = "admin",
                     Role = "Admin",
-                    Password = "Admin@123",
+                    Password = "Admin123",
                     CreatedAt = now,
                     UpdatedAt = now
                 };

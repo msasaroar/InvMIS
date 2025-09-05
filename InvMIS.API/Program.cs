@@ -107,7 +107,11 @@ namespace InvMIS.API
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
-                app.UseSwaggerUI();
+                app.UseSwaggerUI(c =>
+                {
+                    c.EnablePersistAuthorization();
+                    c.EnableFilter();
+                });
             }
 
             app.UseHttpsRedirection();
