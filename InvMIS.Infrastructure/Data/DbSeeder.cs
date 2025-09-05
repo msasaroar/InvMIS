@@ -1,4 +1,5 @@
 ﻿using InvMIS.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace InvMIS.Infrastructure.Data
@@ -13,22 +14,19 @@ namespace InvMIS.Infrastructure.Data
             // Check if default admin exists (by Username)
             if (!await context.Users.AnyAsync(u => u.Username == "admin"))
             {
-                var passwordHash = Convert.ToBase64String(
-                    System.Security.Cryptography.SHA256.HashData(
-                        System.Text.Encoding.UTF8.GetBytes("Admin@123")
-                    )
-                );
 
                 var now = DateTime.UtcNow;
-
                 var adminUser = new User
                 {
                     Username = "admin",
-                    Password = passwordHash,   // Password property use করবে
                     Role = "Admin",
                     CreatedAt = now,
                     UpdatedAt = now
                 };
+
+                var hasher = new PasswordHasher<User>();
+                var hashPassword = hasher.HashPassword(adminUser, "Admin@123");
+                adminUser.Password = hashPassword;
 
                 context.Users.Add(adminUser);
                 await context.SaveChangesAsync();
