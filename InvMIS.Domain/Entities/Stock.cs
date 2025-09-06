@@ -1,4 +1,6 @@
-﻿namespace InvMIS.Domain.Entities
+﻿using System.Text.Json.Serialization;
+
+namespace InvMIS.Domain.Entities
 {
     public class Stock
     {
@@ -7,6 +9,7 @@
         public int Quantity { get; set; }
         public DateTime LastUpdated { get; set; } = DateTime.UtcNow;
 
+        [JsonIgnore]
         public Product? Product { get; set; }
     }
 }

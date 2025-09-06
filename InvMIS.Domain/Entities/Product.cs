@@ -1,4 +1,6 @@
-﻿namespace InvMIS.Domain.Entities
+﻿using System.Text.Json.Serialization;
+
+namespace InvMIS.Domain.Entities
 {
     public class Product
     {
@@ -14,7 +16,10 @@
         public int SupplierId { get; set; }          // FK to Supplier
 
         // Navigation Properties
-        public Category Category { get; set; } = null!;
-        public Supplier Supplier { get; set; } = null!;
+        [JsonIgnore]
+        public Category? Category { get; set; }
+
+        [JsonIgnore]
+        public Supplier? Supplier { get; set; }
     }
 }

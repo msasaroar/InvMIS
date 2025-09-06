@@ -1,4 +1,6 @@
-﻿namespace InvMIS.Domain.Entities
+﻿using System.Text.Json.Serialization;
+
+namespace InvMIS.Domain.Entities
 {
     public class Category
     {
@@ -7,6 +9,7 @@
         public string? Description { get; set; }       // Optional Description
 
         // Navigation Property (initialize to avoid null reference)
+        [JsonIgnore]
         public ICollection<Product> Products { get; set; } = new List<Product>();
     }
 }
